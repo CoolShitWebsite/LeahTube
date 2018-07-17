@@ -7,7 +7,7 @@ body {
 	background-color: #212121;
 	color: #efefef;
 	height: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 nav a.brand-logo {
@@ -19,16 +19,26 @@ nav {
     margin-bottom: 3rem;
 }
 
-#titleRow {
-	display: none;
-}
+/*#titleRow {	display: none;}*/
 
-#searchnav nav {
+#searchnav nav, #urlnav nav {
 	color: #212121;
 }
-#searchnav {
+#searchnav, #urlnav{
 	margin: 0 auto;
-    width: 95%;
+    /*width: 95%;*/
 	padding-bottom: 1.5rem;
-	width: 50rem;
+	/*width: 50rem;*/
+}
+
+
+#searchRow .card, .card.horizontal .card-image img, .card-content {
+	height: 16rem;
+	background-color: #313131;
+	cursor: pointer;
+}
+
+.card-action a {
+	display: inline-block;
+	vertical-align: middle;
 }

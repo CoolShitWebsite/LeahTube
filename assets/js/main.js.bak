@@ -4,7 +4,7 @@ $(document).ready(async function(){
 });
 
 Domain = window.location.origin;
-if (Domain==='https://coolshitwebsite.github.io') Domain = 'https://coolshitwebsite.github.io/LeahTube/';
+if (Domain==='https://coolshitwebsite.github.io') Domain = 'https://coolshitwebsite.github.io/LeahTube/'
 
 $('#urlnav form').submit(function( event ) {
 	event.preventDefault();
