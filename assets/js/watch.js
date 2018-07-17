@@ -84,7 +84,7 @@ $(document).ready(async function(){
 	v = getAllUrlParams().v;
 	if (typeof v==='undefined') return M.toast({html: 'YouTube URL Missing!'});
 	//Server = `https://you-link.herokuapp.com/?url=https://www.youtube.com/watch?v=${v}`;
-	Server = `http://localhost:3000?v=${v}`;
+	Server = `https://ytdlscraper.glitch.me?v=${v}`;
 	Video = await $.getJSON(Server);
 	//return console.log(Video);
 	$('#titleRow h4').append(Video.title);
