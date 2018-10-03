@@ -46,7 +46,7 @@ function main(){
 	params = getAllUrlParams();
 	if (typeof params.v==='string'){
 		AddDebugLine('Getting YouTube Metadata');
-		$.getJSON('http://allorigins.me/get?url='+encodeURIComponent(`https://www.youtube.com/watch?v=${params.v}`), LoadData);
+		$.getJSON('https://allorigins.me/get?url='+encodeURIComponent(`https://www.youtube.com/watch?v=${params.v}`), LoadData);
 	} else {
 		return HandleError({
 			code: 'C0',
@@ -104,7 +104,7 @@ function startGettingFormats(){
 	url.searchParams.append('hl',('en'));
 	if (Video.Extra.PlayerConfig && Video.Extra.PlayerConfig.sts) url.searchParams.append('sts',Video.Extra.PlayerConfig.sts);
 	
-	return $.get('http://allorigins.me/get?url='+encodeURIComponent(url), getTokens);
+	return $.get('https://allorigins.me/get?url='+encodeURIComponent(url), getTokens);
 }
 
 function getTokens(data){
@@ -131,7 +131,7 @@ function getTokens(data){
 	}
 	// return decodeTokens(tokens);
 	AddDebugLine('Retrieving Tokens');
-	return $.get('http://allorigins.me/get?url='+encodeURIComponent(html5playerfile), decodeSignatures);
+	return $.get('https://allorigins.me/get?url='+encodeURIComponent(html5playerfile), decodeSignatures);
 }
 
 function decodeTokens(tokens){
